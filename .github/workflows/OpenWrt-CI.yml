@@ -71,7 +71,7 @@ jobs:
       run: |
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ./artifact/buildinfo/ 2>&1 | tee wetransfer.log
-        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)
+        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
 
     - name: 上传固件到 WeTransfer
       run: |

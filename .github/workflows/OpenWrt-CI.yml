@@ -46,8 +46,8 @@ jobs:
 
     - name: 创建配置文件
       run: |
-      cd
-      make defconfig
+        cd
+        make defconfig
 
     - name: 下载软件包
       run: |

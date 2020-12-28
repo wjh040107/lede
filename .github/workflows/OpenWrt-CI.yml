@@ -61,9 +61,9 @@ jobs:
         mkdir -p ./artifact/package
         mkdir -p ./artifact/buildinfo
         rm -rf $(find ./bin/targets/ -type d -name "packages")
-        cp -rf $(find lede/bin/targets/ -type f -name "*combined*img*") ./artifact/firmware/
-        cp -rf $(find lede/bin/packages/ -type f -name "*.ipk") ./artifact/package/
-        cp -rf $(find lede/bin/targets/ -type f -name "*.buildinfo" -o -name "*.manifest") ./artifact/buildinfo/
+        cp -rf $(find ./bin/targets/ -type f -name "*combined*img*") ./artifact/firmware/
+        cp -rf $(find ./bin/packages/ -type f -name "*.ipk") ./artifact/package/
+        cp -rf $(find ./bin/targets/ -type f -name "*.buildinfo" -o -name "*.manifest") ./artifact/buildinfo/
 
     - name: 上传固件信息到 WeTransfer
       run: |

@@ -7,7 +7,14 @@
 #
 name: OpenWrt-CI
 
-on:
+on: 
+  release:
+    types: [published]
+    
+#  push:
+#    branches: 
+#      - master
+
 # 点赞触发
   watch:
     types: [started]

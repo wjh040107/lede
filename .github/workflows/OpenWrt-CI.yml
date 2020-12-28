@@ -45,7 +45,9 @@ jobs:
         ./scripts/feeds install -a
 
     - name: 创建配置文件
-      run: make defconfig
+      run: |
+      cd
+      make defconfig
 
     - name: 下载软件包
       run: |
